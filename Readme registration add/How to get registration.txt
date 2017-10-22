@@ -1,0 +1,11 @@
+1. Go into a command prompt of some form
+2. type "pip install django-easyregistration" no quotes
+
+3. copy the register.html file to
+"C:\Users\[YOUR USER HERE]\AppData\Local\Programs\Python\Python36-32\Lib\site-packages\registration\templates\registration"
+
+
+Then copy the rest of the other files in the current folder
+
+to "C:\Users\[YOUR USER HERE]\AppData\Local\Programs\Python\Python36-32\Lib\site-packages\registration"
+(overwrite the old files)

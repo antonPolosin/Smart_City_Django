@@ -1,0 +1,138 @@
+<html lang="en">
+  <head>
+	<!-- Required meta tags -->
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>{% block title %}Smart City{% endblock %}</title>
+
+	<!-- Bootstrap CSS-->
+    {% load staticfiles %}
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Custom CSS-->
+	<link rel="stylesheet" type="text/css" href="{% static 'sites/style.css' %}"/>
+  </head>
+<body>
+
+<!--nav bar start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/sites">The Shia Labeef</a>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class = "form-inline my-2 my-lg-0 text-center">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" autofocus>
+      <button type = "button" class="btn btn-primary my-2 my-sm-0" type="sumbit">Search</button>
+    </form>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+         <ul class="navbar-nav ml-auto">
+             <!--LOGOUT CODE GOES HERE-->
+          <li class="nav-item"><a class ="nav-link" href="#contact">LOGOUT</a></li>
+      </ul>
+</div>
+</nav>
+<!--nav bar ends -->
+
+<h2 class="display-4 py-5 mt-5 text-center">All Zoos in</h2>
+
+<!---Card Section-->
+<div class="container text-muted">
+    <!-- cards -->
+    <!--First Row-->
+<div class="row">
+   <div class="col-sm-8">
+          <div class="media">
+            <img class="d-flex align-self-start mr-3 result-img" src="../static/sites/images/bacchus.jpg" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Restaurant name</h5>
+              <p>Location</p>
+              <p>Phone Number: </p>
+            </div>
+          </div>
+   </div>
+    <div class="col-sm-3 offset-sm-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <div id="map" class="results-map"></div>
+        </div>
+    </div>
+</div>
+    <!--End of the third row row-->
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<script>
+  function initMap() {
+    var brisbane = {lat: -27.4698, lng: 153.0251};
+
+    //Init Map
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: brisbane
+    });
+
+    //Example Markers
+    var marker = new google.maps.Marker({
+      position: brisbane,
+      map: map
+    });
+    var qut = new google.maps.Marker({
+      position: {lat: -27.477356, lng: 153.028423},
+      map: map
+    });
+    var uq = new google.maps.Marker({
+      position: {lat: -27.495431, lng: 153.01203},
+      map: map
+    });
+    var griffith = new google.maps.Marker({
+      position: {lat: -27.555090, lng: 153.053258},
+      map: map
+    });
+
+    //Cluster Example
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var markers = locations.map(function(location, i) {
+        return new google.maps.Marker({
+          position: location,
+          label: labels[i % labels.length]
+        });
+      });
+    var markerCluster = new MarkerClusterer(map, markers,
+          {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+  }
+
+  var locations = [
+      {lat: -27.477073, lng: 153.020317},
+      {lat: -27.471153, lng: 153.018093},
+      {lat: -27.475342, lng: 153.020904},
+      {lat: -27.472124, lng: 153.025239},
+      {lat: -27.469630, lng: 153.021226},
+    ]
+</script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Wrqf8r1bqPRRKUJDTUQ-oHFgeO8PchA&callback=initMap"></script>
+
+  <!---Card Section End-->
+    {% block body %}
+{% endblock %}
+</body>
+  <!--[ footer ] -->
+    <footer class="text-muted">
+    <div class="container">
+      <p class="text-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>Smart City Project</p>
+      <p>The Shia Labeef Team</p>
+    </div>
+  </footer>
+
+</html>

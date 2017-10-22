@@ -1,0 +1,239 @@
+<html lang="en">
+  <head>
+	<!-- Required meta tags -->
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+	<title>{% block title %}Smart City{% endblock %}</title>
+     
+	<!-- Bootstrap CSS-->
+    {% load staticfiles %}
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Custom CSS-->
+	<link rel="stylesheet" type="text/css" href="{% static 'sites/style.css' %}"/>
+  </head>
+
+<body>
+
+<!--nav bar start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">The Shia Labeef</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class = "nav-link" href="#contact">LOGOUT</a></li>
+      </ul>
+</div>
+</nav>
+<!--nav bar ends -->
+<!--hero image -->
+  <section class="jumbotron" id="Home">
+    <div class="container">
+      <h1 class="display-4">Smart City Project</h1>
+
+      <div class="dashboard-search">
+          <form class = "form-inline my-2 my-lg-0 text-center">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" autofocus>
+              <div class="dropdown">
+                <button type="button" class="btn btn-dropdown-color dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose City</button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://www.australia.com/en/places/brisbane.html">Brisbane</a>
+                    <a class="dropdown-item" href="#">Sydney</a>
+                    <a class="dropdown-item" href="#">Adelaide</a>
+                    <a class="dropdown-item" href="#">Perth</a>
+                    <a class="dropdown-item" href="#">Melbourne</a>
+
+                    </div>
+                </div>
+              <button type = "button" class="btn btn-primary my-2 my-sm-0" type="sumbit">Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+<!--hero image ends-->
+
+
+<h2 class="display-4 py-5 mt-5 text-center">Discover</h2>
+
+<!---Card Section-->
+<div class="container text-muted">
+    <!-- cards -->
+    <!--First Row-->
+    <div class="row">
+            <div class="col-md-4 col-lg-4">
+                <a href = "/universities">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/uni.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Universities</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href = "/museums">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/museum.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Museums</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href = "/parks">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/park.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Parks</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+    </div>
+    <!--End of the first row-->
+
+    <!--Second Row-->
+    <div class="row row-m-t">
+            <div class="col-md-4 col-lg-4">
+                <a href = "/libraries" class="">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/libraries.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Libraries</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href = "/malls" class="">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/mall.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Malls</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href = "/restaurants" class="">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/restaurant.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Restaurants</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+    </div>
+    <!--End of the second row-->
+
+    <!--Third Row-->
+    <div class="row row-m-t row-m-b">
+            <div class="col-md-4 col-lg-4">
+                <a href = "/hotels" class="">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/hotel.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Hotels</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href = "/industries" class="">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/industrie.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Industries</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href = "/zoos" class="">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/kengoroo.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Zoos</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+    </div>
+    <!--End of the third row row-->
+</div>
+<!--End of Category cards section-->
+
+<!--The news category starts-->
+<h2 class="display-4 py-5 mt-5 text-center">News</h2>
+<div class="container text-muted">
+    <!-- cards -->
+    <!--First Row-->
+    <div class="row row-m-b">
+            <div class="col-md-4 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/australia.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">TOP 10 AUSSIE BUCKET-LIST DESTINATIONS</h4>
+                         <p class="card-text">According to the survey of more than 4100 Australians, the top 10 Aussie bucket list destinations that people intend to visit one day are:</p>
+                    <a href="http://www.escape.com.au/australia/top-10-aussie-bucketlist-destinations/news-story/05253cd21c26ae3985ca1979a6765ec3" class="text-right" target = "_blank">Read More</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4 col-lg-4">
+
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/ragnarock.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Thor Ragnarok review: Taika Waititi delivers the funniest Marvel movie ever</h4>
+                        <p class="card-text">New Zealand's Taika Waititi makes movies somewhere between reality and absurdist fantasy: where comedy</p>
+                        <a href="http://www.abc.net.au/news/2017-10-21/thor-ragnarok-the-funniest-marvel-movie-ever/9071148" class="text-right" target = "_blank">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-lg-4">
+
+                <div class="card">
+                    <img class="card-img-top img_adjusted" src="../static/sites/images/top_uni.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Top Universities in Australia 2018</h4>
+                         <p class="card-text"> World rankings of Australian universities are calculated by averaging the rankings produced by QS World University Rankings, the Shanghai Academic Ranking</p>
+                        <a href="https://universityreviews.com.au/australian-rankings/" class="text-right" target = "_blank">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>
+    <!--News category ends-->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <!---Card Section End-->
+    {% block body %}
+{% endblock %}
+</body>
+  <!--[ footer ] -->
+    <footer class="text-muted">
+    <div class="container">
+      <p class="text-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>Smart City Project</p>
+      <p>The Shia Labeef Team</p>
+    </div>
+  </footer>
+
+</html>
